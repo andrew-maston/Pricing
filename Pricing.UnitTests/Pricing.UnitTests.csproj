@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Pricing\Pricing\Pricing.csproj" />
+    <ProjectReference Include="..\Pricing\Pricing.csproj" />
   </ItemGroup>
 
 </Project>

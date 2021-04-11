@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pricing</name>
+    </assembly>
+    <members>
+        <member name="T:Pricing.Controllers.InvoiceController">
+            <summary>
+            Invoice controller, used calculating the bill
+            </summary>
+        </member>
+        <member name="M:Pricing.Controllers.InvoiceController.#ctor(Pricing.Services.IInvoiceService,Microsoft.Extensions.Logging.ILogger{Pricing.Controllers.InvoiceController})">
+            <summary>ctor</summary>
+        </member>
+        <member name="M:Pricing.Controllers.InvoiceController.Calculate(Pricing.Models.Dtos.InvoiceRequestDto)">
+            <summary>
+            Calculate an invoice given a request
+            </summary>
+        </member>
+        <member name="T:Pricing.Controllers.OfferController">
+            <summary>
+            Offer controller, used for retrieving offers
+            </summary>
+        </member>
+        <member name="M:Pricing.Controllers.OfferController.#ctor(Pricing.Services.IOfferService,Microsoft.Extensions.Logging.ILogger{Pricing.Controllers.OfferController})">
+            <summary>ctor</summary>
+        </member>
+        <member name="M:Pricing.Controllers.OfferController.GetAll">
+            <summary>
+            Get all available offers
+            </summary>
+        </member>
+        <member name="T:Pricing.Controllers.ProductController">
+            <summary>
+            Product controller, used for retrieving products
+            </summary>
+        </member>
+        <member name="M:Pricing.Controllers.ProductController.#ctor(Pricing.Services.IProductService,Microsoft.Extensions.Logging.ILogger{Pricing.Controllers.ProductController})">
+            <summary>ctor</summary>
+        </member>
+        <member name="M:Pricing.Controllers.ProductController.GetAll">
+            <summary>
+            Get all available products
+            </summary>
+        </member>
+        <member name="T:Pricing.Extensions.OrderItemsExtensions">
+            <summary>
+            Extensions for a collection of OrderItem
+            </summary>
+        </member>
+        <member name="M:Pricing.Extensions.OrderItemsExtensions.GetOrderRows(System.Collections.Generic.IReadOnlyCollection{Pricing.Models.OrderItem},System.Collections.Generic.IEnumerable{Pricing.Models.Product})">
+            <summary>
+            Adapts OrderItems to OrderRows
+            </summary>
+            <param name="orderItems"></param>
+            <param name="products"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pricing.Services.IInvoiceService">
+            <summary>
+            Used to calculate invoices
+            </summary>
+        </member>
+        <member name="M:Pricing.Services.IInvoiceService.Calculate(System.Collections.Generic.IReadOnlyCollection{Pricing.Models.OrderItem})">
+            <summary>
+            Calculates an invoice given a collection of order items
+            </summary>
+            <param name="orderItems"></param>
+            <returns>Calculated Invoice</returns>
+        </member>
+        <member name="T:Pricing.Services.InvoiceService">
+            <inheritdoc/>
+        </member>
+        <member name="M:Pricing.Services.InvoiceService.#ctor(Pricing.Services.IProductService,Pricing.Services.IOfferService)">
+            <summary>ctor</summary>
+        </member>
+        <member name="M:Pricing.Services.InvoiceService.Calculate(System.Collections.Generic.IReadOnlyCollection{Pricing.Models.OrderItem})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Pricing.Services.IOfferService">
+            <summary>
+            Retrieves offers
+            </summary>
+        </member>
+        <member name="M:Pricing.Services.IOfferService.GetAll">
+            <summary>
+            Retrieves collection of offers
+            </summary>
+            <returns>IReadOnlyCollection of Offer</returns>
+        </member>
+        <member name="T:Pricing.Services.IProductService">
+            <summary>
+            Used to retrieve products
+            </summary>
+        </member>
+        <member name="M:Pricing.Services.IProductService.GetAll">
+            <summary>
+            Retrieves products
+            </summary>
+            <returns>IReadOnlyCollection of Products</returns>
+        </member>
+        <member name="M:Pricing.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Pricing.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
