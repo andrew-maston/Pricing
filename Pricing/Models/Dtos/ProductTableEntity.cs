@@ -5,6 +5,6 @@ namespace Pricing.Models.Dtos
     public class ProductTableEntity : TableEntity
     {
         public string Name { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
     }
 }

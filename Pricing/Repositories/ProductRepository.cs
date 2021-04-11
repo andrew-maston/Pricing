@@ -27,7 +27,7 @@ namespace Pricing.Repositories
             return (results != null ? results.Select(r => new Product
             {
                 Name = r.Name,
-                Price = r.Price
+                Price = decimal.Parse(r.Price.ToString())
             }) : new List<Product>()).ToArray();
         }
     }
