@@ -7,11 +7,11 @@ namespace Pricing.Models
     {
         public IEnumerable<OrderRow> OrderRows { get; set; }
 
-        public decimal SubTotal => OrderRows.Any(t => t != null) ? OrderRows.Sum(t => t.SubTotal) : 0;
+        public string SubTotal => (OrderRows.Any(t => t != null) ? OrderRows.Sum(t => t.SubTotal) : 0).ToString("C");
 
-        public decimal TotalWithSavings => OrderRows.Any(t => t != null) ? OrderRows.Sum(t => t.SubTotalWithSaving) : 0;
+        public string TotalWithSavings => (OrderRows.Any(t => t != null) ? OrderRows.Sum(t => t.SubTotalWithSaving) : 0).ToString("C");
 
-        public decimal TotalSaving => OrderRows.Any(t => t != null) ? OrderRows.Sum(t => t.Saving) : 0;
+        public string TotalSaving => (OrderRows.Any(t => t != null) ? OrderRows.Sum(t => t.Saving) : 0).ToString("C");
 
         public InvoiceStatus Status { get; set; }
     }

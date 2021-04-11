@@ -109,9 +109,9 @@ namespace Pricing.UnitTests.Services
             var invoice = await _invoiceService.Calculate(orderItems);
 
             Assert.IsNotNull(invoice);
-            Assert.AreEqual(expectedSubTotal.ToString("C"), invoice.SubTotal.ToString("C"));
-            Assert.AreEqual(expectedSaving.ToString("C"), invoice.TotalSaving.ToString("C"));
-            Assert.AreEqual(expectedTotalWithSavings.ToString("C"), invoice.TotalWithSavings.ToString("C"));
+            Assert.AreEqual(expectedSubTotal.ToString("C"), invoice.SubTotal);
+            Assert.AreEqual(expectedSaving.ToString("C"), invoice.TotalSaving);
+            Assert.AreEqual(expectedTotalWithSavings.ToString("C"), invoice.TotalWithSavings);
         }
 
         [Test]
@@ -131,9 +131,9 @@ namespace Pricing.UnitTests.Services
             var invoice = await _invoiceService.Calculate(orderItems);
 
             Assert.IsNotNull(invoice);
-            Assert.AreEqual(expectedSubTotal.ToString("C"), invoice.SubTotal.ToString("C"));
-            Assert.AreEqual(expectedSaving.ToString("C"), invoice.TotalSaving.ToString("C"));
-            Assert.AreEqual(expectedTotalWithSavings.ToString("C"), invoice.TotalWithSavings.ToString("C"));
+            Assert.AreEqual(expectedSubTotal.ToString("C"), invoice.SubTotal);
+            Assert.AreEqual(expectedSaving.ToString("C"), invoice.TotalSaving);
+            Assert.AreEqual(expectedTotalWithSavings.ToString("C"), invoice.TotalWithSavings);
         }
 
         [Test]
@@ -154,9 +154,9 @@ namespace Pricing.UnitTests.Services
             var invoice = await _invoiceService.Calculate(orderItems);
 
             Assert.IsNotNull(invoice);
-            Assert.AreEqual(expectedSubTotal.ToString("C"), invoice.SubTotal.ToString("C"));
-            Assert.AreEqual(expectedSaving.ToString("C"), invoice.TotalSaving.ToString("C"));
-            Assert.AreEqual(expectedTotalWithSavings.ToString("C"), invoice.TotalWithSavings.ToString("C"));
+            Assert.AreEqual(expectedSubTotal.ToString("C"), invoice.SubTotal);
+            Assert.AreEqual(expectedSaving.ToString("C"), invoice.TotalSaving);
+            Assert.AreEqual(expectedTotalWithSavings.ToString("C"), invoice.TotalWithSavings);
         }
     }
 }
